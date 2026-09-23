@@ -113,7 +113,7 @@ static void screen_add(Screen *s, Widget *w) {
 static void screen_dispatch(Screen *s, int code) {
     for (int i = 0; i < s->count; i++) {
         Widget *w = s->items[i];
-        if (w != NULL){
+        if (w != NULL){ 
         w->vtbl->on_event(w, code);
         }
     else if (w == NULL) continue;
